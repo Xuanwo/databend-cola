@@ -1,0 +1,15 @@
+[package]
+name = "databend-cola"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[dependencies]
+common-config = { path = "./databend/src/query/config" }
+
+[patch.crates-io]
+arrow2 = { git = "https://github.com/jorgecarleitao/arrow2", rev = "9749aee" }
+parquet2 = { git = "https://github.com/jorgecarleitao/parquet2", rev = "ed0e1ff" }
+metrics = { git = "https://github.com/datafuse-extras/metrics.git", rev = "bc49d03" }
